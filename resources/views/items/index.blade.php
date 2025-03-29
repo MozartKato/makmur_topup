@@ -8,7 +8,7 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+<body class="bg-gradient-to-r from-blue-500 to-purple-600 flex justify-center items-center min-h-screen">
     <div class="w-full max-w-lg bg-white p-6 rounded-lg shadow-lg">
         <h1 class="text-3xl font-bold text-center text-gray-800 mb-4">Items for {{ $game->name }}</h1>
         <a href="{{ url('/') }}" class="text-blue-500 hover:underline block text-center mb-4">&larr; Back to Games</a>

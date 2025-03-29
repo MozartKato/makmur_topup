@@ -6,7 +6,7 @@
     @vite('resources/css/app.css')
     <title>Status Transaksi</title>
 </head>
-<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+<body class="bg-gradient-to-r from-blue-500 to-purple-600 flex justify-center items-center min-h-screen">
     <div class="bg-white p-6 rounded-lg shadow-lg w-96 text-center">
         <h1 class="text-xl font-bold text-gray-800 mb-4">Status Transaksi</h1>
         <p class="text-gray-600"><strong>Kode Transaksi:</strong> {{ $transaction->transaction_code }}</p>
