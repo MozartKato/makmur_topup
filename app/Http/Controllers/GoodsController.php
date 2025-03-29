@@ -59,7 +59,7 @@ class GoodsController extends Controller
         ]);
 
         if ($response->successful() && isset($data['link_url'])) {
-            return redirect()->away('/transaction/'.$transaction_code);
+            return redirect()->away('/transaction/' . $transaction_code);
         }
 
         return response()->json($data, 500);
@@ -83,9 +83,14 @@ class GoodsController extends Controller
         if ($response->successful() && isset($data['data'][0]['status'])) {
             $transaction->status = $data['data'][0]['status'];
             $transaction->save();
-        }        
+        }
 
         return view('transactions.show', compact('transaction'));
+    }
 
+    public function showAllTransactions()
+    {
+        $transactions = Transactions::orderBy('created_at', 'desc')->take(10)->get();
+        return view('transactions.index', compact('transactions'));
     }
 }
